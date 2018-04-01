@@ -8,4 +8,7 @@
         </view>
 
     </view>
+
+    <text class="note" selectable='true'>注：如果对「表情锅」有兴趣，可加入QQ群：693978572</text>
+
 </scroll-view>
