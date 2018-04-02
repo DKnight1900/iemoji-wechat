@@ -26,5 +26,7 @@ App({
    */
   onError: function (msg) {
     
-  }
+  },
+
+  is_examining: true
 })

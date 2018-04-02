@@ -1,0 +1,5 @@
+<!--pages/about/about.wxml-->
+<text class='info' selectable='true'>「表情锅」是由 @CoXier 独立开发完成的微信小程序，希望这个程序能在一定程度上帮到您。联系方式：justcoxier@gmail.com</text>
+<text class='donate-info' style='display:{{show_donate}};'>赞助「表情锅」</text>
+<image class="donate" mode='aspectFit' src='../../resource/donate.png' bindtap="previewImage" style='display:{{show_donate}};'></image>
+<text class="note" selectable='true'>注：如果对「表情锅」有兴趣，可加入QQ群：693978572</text>

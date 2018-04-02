@@ -1,13 +1,26 @@
 {
   "window": {
     "navigationBarTextStyle": "black",
-    "navigationBarTitleText": "sorry,没钱也可以为所欲为",
+    "navigationBarTitleText": "表情锅",
     "navigationBarBackgroundColor": "#F8F8F8",
     "backgroundColor": "#F8F8F8"
   },
   "pages": [
     "pages/index/index",
     "pages/edit/edit",
-    "pages/detail/detail"
-  ]
+    "pages/detail/detail",
+    "pages/about/about"
+  ],
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "pagePath": "pages/about/about",
+        "text": "关于"
+      }
+    ]
+  }
 }

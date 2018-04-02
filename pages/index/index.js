@@ -72,8 +72,9 @@ Page({
   request_templates: function () {
     var that = this;
     var tmp = [];
+    var appInstance = getApp()
     wx.request({
-      url: 'https://miniapp.codedragon.tech/get_templates_version?' + version,
+      url: 'https://miniapp.codedragon.tech/get_templates_version?version=' + version,
       success: function (res) {
         for (var template of res.data.templates){
           tmp.push(template)
@@ -81,7 +82,8 @@ Page({
         that.setData({
           templates: tmp,
           is_examining: res.data.is_examining
-        })   
+        })
+        appInstance.is_examining=res.data.is_examining
       }
     })
   },
