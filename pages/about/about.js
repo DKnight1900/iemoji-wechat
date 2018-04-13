@@ -6,7 +6,9 @@ Page({
    */
   data: {
     imagelist: ['https://t1.aixinxi.net/o_1ca2khlkatf5uk6vjgtv4ki7a.png-j.jpg'],
-    show_donate: 'none'
+    show_donate: 'none',
+    info_1: '',
+    info_2: ''
   },
 
   /**
@@ -14,11 +16,18 @@ Page({
    */
   onLoad: function (options) {
     var appInstance = getApp()
-    this.setData(
-      {
-        show_donate: appInstance.is_examining ? 'none' : 'block'
+    var that = this
+    wx.request({
+      url: 'https://miniapp.codedragon.tech/get_about_info',
+      success: function (res) {
+        that.setData({
+          show_donate: appInstance.is_examining ? 'none' : 'block',
+          info_1: res.data[0],
+          info_2: res.data[1]
+        })
+
       }
-    )
+    })
   },
 
   /**
